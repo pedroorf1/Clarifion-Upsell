@@ -1,27 +1,21 @@
+'use client'
 import React from 'react'
 
-const GenericContainer = ({ style, children }) => {
+export const GenericContainer = ({ style, children }) => {
     if (style === undefined) {
         style = {
             display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
             width: '100%',
             height: '100%',
-            backgroundColor: 'transparent',
         }
     }
     return <div style={style}>{children}</div>
 }
 
-const GenericButton = ({ style, text, props }) => {
+export const GenericButton = ({ style, text, props }) => {
     if (style === undefined) {
         style = {
             display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
         }
     }
     return (
@@ -31,4 +25,20 @@ const GenericButton = ({ style, text, props }) => {
     )
 }
 
-export default { GenericContainer, GenericButton }
+export const GenericBox = ({ style, children }) => {
+    if (style === undefined) {
+        style = {
+            display: 'flex',
+        }
+    }
+    return <section style={style}>{children}</section>
+}
+
+export const GenericText = ({ style, children }) => {
+    if (style === undefined) {
+        style = {
+            display: 'flex',
+        }
+    }
+    return <text style={style}>{children}</text>
+}

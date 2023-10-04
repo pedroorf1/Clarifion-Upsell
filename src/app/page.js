@@ -1,3 +1,5 @@
+import Initial from '@/pages/home'
+
 export default function Home() {
-    return <main>Hellow</main>
+    return <Initial />
 }
