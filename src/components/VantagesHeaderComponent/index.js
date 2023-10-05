@@ -6,19 +6,17 @@ import theme from '@/theme/global/style'
 
 export const Card = ({ text, iconName = 'mdi-light:home' }) => {
     const boxStyle = {
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr ',
-        maxWidth: '200px',
-        backgroundColor: 'transparent',
+        display: 'flex',
         fontSize: theme.baseFonts.fontSize.medio,
         textTransform: 'uppercase',
-        flexDirection: 'row !important',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         alignItems: 'center',
     }
     const iconStyle = {
         align: 'center',
         margin: '10px',
+        width: '22px',
+        height: '22px',
     }
 
     return (

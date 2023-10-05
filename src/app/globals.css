@@ -1,5 +1,8 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('https://fonts.googleapis.com/css2?family=Manrope&display=swap') format('truetype');
+}
 * {
-  max-width: 1500px;
   margin:0;
   padding:0;
   border:0;

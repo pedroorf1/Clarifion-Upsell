@@ -1,4 +1,9 @@
 const theme = {
+    naveBaseCollors: {
+        backgroundColor: '#252F3D',
+        color: '#FFFFFF',
+        fontSize: '12px',
+    },
     baseCollors: {
         vermelho: '#f00',
         verde: '#0f0',
@@ -8,6 +13,7 @@ const theme = {
         cinza: '#ccc',
         preto: '#000',
         magenta: '#f0f',
+        white: '#FFFFFF',
     },
     baseFonts: {
         cores: {
