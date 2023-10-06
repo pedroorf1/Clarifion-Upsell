@@ -26,28 +26,26 @@ export const Steps = () => {
     return (
         <GenericContainer
             style={{
-                marginTop: 0,
+                position: 'relative',
+                marginTop: '120px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                margin: '0 auto',
                 width: '100%',
-                backgroundColor: theme.baseCollors.white,
+                backgroundColor: 'transparent',
                 color: theme.baseCollors.preto,
             }}
         >
             <GenericBox
                 style={{
                     display: 'flex',
-                    marginTop: 0,
                     flexDirection: 'row',
                     width: '1245px',
                     height: '40px',
                     justifyContent: 'space-around',
                     alignItems: 'center',
                     position: 'absolute',
-                    top: 271,
                     rowGap: '24px',
                 }}
             >

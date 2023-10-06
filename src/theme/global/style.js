@@ -4,6 +4,11 @@ const theme = {
         color: '#FFFFFF',
         fontSize: '12px',
     },
+    productBody: {
+        backgroundColor: '#FAFAFA',
+        color: '#000000',
+        fontSize: '12px',
+    },
     baseCollors: {
         vermelho: '#f00',
         verde: '#0f0',
@@ -13,7 +18,7 @@ const theme = {
         cinza: '#ccc',
         preto: '#000',
         magenta: '#f0f',
-        white: '#FFFFFF',
+        branco: '#FFFFFF',
     },
     baseFonts: {
         cores: {

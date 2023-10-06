@@ -19,6 +19,28 @@ export const GenericContainer = ({ style, children }) => {
     return <div style={style}>{children}</div>
 }
 
+export const Badge = ({ style, children }) => {
+    if (style === undefined) {
+        style = {
+            backgroundColor: 'transparent',
+            display: 'flex',
+            flexDirection: 'row',
+            Width: '100%',
+            padding: '20px',
+        }
+    } else {
+        style = {
+            backgroundColor: 'transparent',
+            display: 'flex',
+            flexDirection: 'row',
+            maxWidth: '100%',
+            padding: '20px',
+            ...style,
+        }
+    }
+    return <div style={style}>{children}</div>
+}
+
 export const GenericButton = ({ style, text, props }) => {
     if (style === undefined) {
         style = {
@@ -68,6 +90,10 @@ export const GenericText = ({ style, children }) => {
 export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
     const mathSvg = /.svg/g
 
+    console.log('imgsrc: ', imgSrc)
+
+    const source = !imgSrc.src ? imgSrc : imgSrc.src
+
     if (style === undefined) {
         style = {
             display: 'flex',
@@ -104,7 +130,7 @@ export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
                 }}
             >
                 {middleText ? midText : null}
-                <img style={style} src={imgSrc.src} />
+                <img style={style} src={source} />
             </div>
         )
     } else {
@@ -118,7 +144,7 @@ export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
                 }}
             >
                 {middleText ? midText : null}
-                <img style={style} src={imgSrc} />
+                <img style={style} src={source} />
             </div>
         )
     }

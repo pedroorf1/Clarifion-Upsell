@@ -11,12 +11,12 @@ export const WaitOrder = () => {
     return (
         <GenericContainer
             style={{
-                marginTop: 0,
+                marginTop: '-11px',
+                marginBottom: '40px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                margin: '0 auto',
                 width: '100%',
                 backgroundColor: theme.baseCollors.white,
                 color: theme.baseCollors.preto,

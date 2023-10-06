@@ -6,6 +6,7 @@ import { Nav } from '@/components/nav'
 import { TitleBar } from '@/components/TitleBar'
 import { WaitOrder } from '@/components/WaitOrder'
 import { Steps } from '@/components/Steps'
+import { BodyProduct } from '@/components/BodyProduct'
 
 const Initial = () => {
     return (
@@ -14,6 +15,7 @@ const Initial = () => {
             <TitleBar />
             <WaitOrder />
             <Steps />
+            <BodyProduct />
         </Container>
     )
 }
