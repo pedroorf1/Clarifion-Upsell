@@ -1,9 +1,8 @@
 import React from 'react'
 
 import theme from '@/theme/global/style'
-
 import { commentsList } from '@/mochs/comments'
-
+import { Score } from '@/components/Score'
 import {
     GenericBox,
     GenericImg,
@@ -11,10 +10,16 @@ import {
     Badge,
 } from '@/components/generics/Generics.js'
 
-import star from '@/components/Comments/imgs/star.svg'
+import verified from '@/components/Comments/imgs/verify1.png'
 
-export const Comments = ({ img, text, userScore, userName, userStatus }) => {
-    return commentsList?.map((comment) => (
+export const Comments = ({
+    text,
+    userScore,
+    userName,
+    userStatus,
+    comments = commentsList,
+}) => {
+    return comments?.map((comment) => (
         <GenericBox
             style={{
                 display: 'flex',
@@ -24,7 +29,20 @@ export const Comments = ({ img, text, userScore, userName, userStatus }) => {
             key={comment?.text}
         >
             <Badge>
-                <GenericImg imgSrc={() => comment?.img} />
+                <GenericImg
+                    imgSrc={comment.img}
+                    style={{ marginRight: '13px' }}
+                />
+                <Score
+                    score={comment.userScore}
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        position: 'relative',
+                        margin: '0px',
+                        top: '-15px',
+                    }}
+                />
             </Badge>
             <GenericText
                 style={{

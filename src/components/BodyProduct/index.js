@@ -13,22 +13,19 @@ import { Comments } from '../Comments'
 
 export const BodyProduct = () => {
     const contentStyle = {
-        maxWidth: '100%',
-        marginTop: '40px',
-        marginBottom: '40px',
         flexDirection: 'column',
-        wordWrap: 'break-word',
-        borderRadius: '10px',
+        margin: '0px auto',
+        maxWidth: 'calc(575px - 40px)',
     }
 
     return (
         <GenericContainer
             style={{
+                flexDirection: 'column',
                 position: 'relative',
-                display: 'flex',
                 maxWidth: '1245px',
                 wordSpacing: 'nowrap',
-                marginTop: '60px',
+                margin: '60px auto',
                 justifyContent: 'center',
                 alignItems: 'center',
                 color: theme.baseCollors.preto,
@@ -36,14 +33,15 @@ export const BodyProduct = () => {
         >
             <GenericBox
                 style={{
-                    display: 'grid',
-                    gridTemplateColumns: '575px 575px',
-                    columnGap: '40px',
+                    display: 'flex',
+                    flexDirection: 'row',
                     position: 'relative',
+                    gap: '40px',
                     backgroundColor: '#FAFAFA',
+                    padding: '40px',
                 }}
             >
-                <GenericBox style={{ ...contentStyle, marginLeft: '40px' }}>
+                <GenericBox style={{ ...contentStyle }}>
                     <GenericImg
                         imgSrc={productLargeImg}
                         style={{
@@ -56,7 +54,7 @@ export const BodyProduct = () => {
                             height: '188px',
                             marginTop: '24px',
                             borderRadius: '20px',
-                            backgroundColor: theme.baseCollors.vermelho,
+                            backgroundColor: theme.baseCollors.branco,
                         }}
                     >
                         <Comments />
@@ -65,7 +63,6 @@ export const BodyProduct = () => {
                 <GenericBox
                     style={{
                         ...contentStyle,
-                        marginRight: '40px',
                     }}
                 >
                     lorem ipsum dolor sit amet, consectetur adip lorem ipsum

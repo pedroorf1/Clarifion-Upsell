@@ -5,12 +5,14 @@ export const GenericContainer = ({ style, children }) => {
     if (style === undefined) {
         style = {
             display: 'flex',
+            flexWrap: 'wrap',
             width: '100%',
             height: '100%',
         }
     } else {
         style = {
             display: 'flex',
+            flexWrap: 'wrap',
             width: '100%',
             height: '100%',
             ...style,
@@ -24,6 +26,7 @@ export const Badge = ({ style, children }) => {
         style = {
             backgroundColor: 'transparent',
             display: 'flex',
+            flexWrap: 'wrap',
             flexDirection: 'row',
             Width: '100%',
             padding: '20px',
@@ -32,6 +35,7 @@ export const Badge = ({ style, children }) => {
         style = {
             backgroundColor: 'transparent',
             display: 'flex',
+            flexWrap: 'wrap',
             flexDirection: 'row',
             maxWidth: '100%',
             padding: '20px',
@@ -63,10 +67,12 @@ export const GenericBox = ({ style, children }) => {
     if (style === undefined) {
         style = {
             display: 'flex',
+            flexWrap: 'wrap',
         }
     } else {
         style = {
             display: 'flex',
+            flexWrap: 'wrap',
             ...style,
         }
     }
@@ -77,10 +83,12 @@ export const GenericText = ({ style, children }) => {
     if (style === undefined) {
         style = {
             display: 'flex',
+            flexWrap: 'wrap',
         }
     } else {
         style = {
             display: 'flex',
+            flexWrap: 'wrap',
             ...style,
         }
     }
@@ -89,10 +97,7 @@ export const GenericText = ({ style, children }) => {
 
 export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
     const mathSvg = /.svg/g
-
-    console.log('imgsrc: ', imgSrc)
-
-    const source = !imgSrc.src ? imgSrc : imgSrc.src
+    const source = !imgSrc?.src ? imgSrc : imgSrc.src
 
     if (style === undefined) {
         style = {
@@ -119,7 +124,7 @@ export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
             {middleText}
         </span>
     )
-    if (String(imgSrc.src).match(mathSvg)) {
+    if (String(imgSrc?.src).match(mathSvg)) {
         return (
             <div
                 style={{

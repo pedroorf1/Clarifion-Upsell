@@ -25,15 +25,14 @@ export const WaitOrder = () => {
             <GenericBox
                 style={{
                     display: 'flex',
-                    marginTop: 0,
                     flexDirection: 'column',
+                    marginTop: 0,
                     width: '636.5px',
-                    height: '78px',
+                    height: '88px',
                     justifyContent: 'space-around',
                     alignItems: 'center',
                     position: 'absolute',
                     top: 135,
-                    rowGap: '24px',
                 }}
             >
                 <GenericText
