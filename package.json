@@ -15,6 +15,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "encoding": "^0.1.13",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "eslint-config-prettier": "^9.0.0",
