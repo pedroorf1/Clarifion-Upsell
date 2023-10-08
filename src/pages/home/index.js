@@ -23,7 +23,17 @@ const Initial = () => {
         const handler = (e) => setMatches(e.matches)
         mediaMatch.addListener(handler)
         screenContext.setScreen(matches ? sm : lg)
-        return () => mediaMatch.removeListener(handler)
+        const listener = () =>
+            screenContext.setScreenSizes({
+                largura: parseInt(document.body.clientWidth),
+                altura: parseInt(document.body.clientHeight),
+            })
+        window.addEventListener('resize', listener)
+
+        return () => {
+            mediaMatch.removeListener(handler)
+            window.removeEventListener('resize', listener)
+        }
     })
 
     return (
@@ -32,7 +42,7 @@ const Initial = () => {
                 {console.log('\n\n\n: screenConstext: ', screenContext._screen)}
                 {console.log(
                     '\n\n\n: document.body.clientWidth: ',
-                    document.body.clientWidth
+                    screenContext._screenSizes
                 )}
             </p>
             <Nav />
