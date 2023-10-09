@@ -23,7 +23,9 @@ export const BodyProduct = () => {
             style={{
                 flexDirection: 'column',
                 position: 'relative',
-                maxWidth: '1245px',
+                // maxWidth: '1245px',
+                // minWidth: '360px',
+                width: ['360px', '1245px'],
                 wordSpacing: 'nowrap',
                 margin: '60px auto',
                 justifyContent: 'center',

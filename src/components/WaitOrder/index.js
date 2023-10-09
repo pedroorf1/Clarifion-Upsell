@@ -20,9 +20,12 @@ export const WaitOrder = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: '100%',
+                maxWidth: '1245px',
+                minWidth: '360px',
                 backgroundColor: theme.baseCollors.white,
                 color: theme.baseCollors.preto,
-                Height: _screenSizes.largura < 430 ? '200px' : '120px',
+                Height: _screenSizes.largura < 430 ? '200px' : '140px',
+                marginBottom: _screenSizes.largura < 965 ? '0' : '40px',
             }}
         >
             <GenericBox
@@ -40,10 +43,10 @@ export const WaitOrder = () => {
             >
                 <GenericText
                     style={{
-                        fontSize: _screen != 360 ? '48px' : '32px',
+                        fontSize: _screenSizes.largura > 965 ? '48px' : '32px',
                         fontStyle: 'regular',
-                        margin: _screen != 360 ? null : '0 auto',
-                        textAlign: _screen != 360 ? null : 'center',
+                        margin: _screenSizes.largura > 650 ? null : '0 auto',
+                        textAlign: _screenSizes.largura > 650 ? null : 'center',
                     }}
                 >
                     Wait ! You Order In Progress.
@@ -52,7 +55,7 @@ export const WaitOrder = () => {
                     style={{
                         display: 'flex',
                         position: 'relative',
-                        fontSize: _screen != 360 ? '24px' : '16px',
+                        fontSize: _screenSizes.largura > 965 ? '24px' : '16px',
                         fontStyle: 'regular',
                         margin: _screen != 360 ? null : '0 auto',
                         textAlign: _screen != 360 ? null : 'center',

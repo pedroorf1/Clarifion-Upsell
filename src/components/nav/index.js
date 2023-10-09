@@ -15,18 +15,30 @@ export const Nav = () => {
                 alignItems: 'center',
                 margin: '0 auto',
                 width: '100%',
+                maxWidth: '100%',
+                minWidth: '360px',
+                overflow: 'hidden',
                 backgroundColor: theme.naveBaseCollors.backgroundColor,
             }}
         >
             <GenericBox
                 style={{
-                    display: 'flex',
+                    display: 'inline-flex',
                     flexDirection: 'row',
-                    width: '1500px',
+                    width: '100%',
+                    maxWidth: '1245px',
                     height: '50px',
                     color: 'white',
                     justifyContent: 'space-around',
                     alignItems: 'center',
+                    scrollBehavior: 'smooth',
+                    overflow: 'hidden',
+                    border: '0',
+                    margin: '0 auto',
+                    '-webkit-overflow-scrolling': 'touch',
+                    '-ms-overflow-style': '-ms-autohiding-scrollbar',
+                    transform: 'translateX(-5px)',
+                    transition: 'transform 0.5s',
                 }}
             >
                 {nave_list.map((item) => (
@@ -34,6 +46,9 @@ export const Nav = () => {
                         text={item.text}
                         iconName={item.iconName}
                         key={item.text}
+                        style={{
+                            flex: '0 0 auto',
+                        }}
                     />
                 ))}
             </GenericBox>

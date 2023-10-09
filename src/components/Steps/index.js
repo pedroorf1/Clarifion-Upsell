@@ -47,6 +47,8 @@ export const Steps = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: '100%',
+                maxWidth: '1245px',
+                minWidth: '320px',
                 backgroundColor: 'transparent',
                 color: theme.baseCollors.preto,
             }}
