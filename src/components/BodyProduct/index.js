@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { SContexto } from '@/context'
 
 import theme from '@/theme/global/style'
 import {
@@ -12,9 +13,12 @@ import productLargeImg from '@/components/BodyProduct/imgs/productLargeImg.png'
 import { Comments } from '../Comments'
 
 export const BodyProduct = () => {
+    const { _screen, _screenSizes } = useContext(SContexto)
+
     const contentStyle = {
+        position: 'relative',
         flexDirection: 'column',
-        margin: '0px auto',
+        margin: _screenSizes.largura < 400 ? '0' : '0 auto',
         maxWidth: 'calc(575px - 40px)',
     }
 
@@ -23,11 +27,11 @@ export const BodyProduct = () => {
             style={{
                 flexDirection: 'column',
                 position: 'relative',
-                // maxWidth: '1245px',
-                // minWidth: '360px',
-                width: ['360px', '1245px'],
+                maxWidth: '1245px',
+                minWidth: '360px',
                 wordSpacing: 'nowrap',
-                margin: '60px auto',
+                margin:
+                    _screenSizes.largura < 800 ? '3rem auto' : '2.5rem auto',
                 justifyContent: 'center',
                 alignItems: 'center',
                 color: theme.baseCollors.preto,
@@ -38,9 +42,9 @@ export const BodyProduct = () => {
                     display: 'flex',
                     flexDirection: 'row',
                     position: 'relative',
-                    gap: '40px',
+                    gap: _screenSizes.largura < 400 ? '20px' : '40px',
                     backgroundColor: '#FAFAFA',
-                    padding: '40px',
+                    padding: _screenSizes.largura < 400 ? '20px' : '40px',
                 }}
             >
                 <GenericBox style={{ ...contentStyle }}>
@@ -48,6 +52,8 @@ export const BodyProduct = () => {
                         imgSrc={productLargeImg}
                         style={{
                             width: '100%',
+                            maxWidth:
+                                _screenSizes.largura < 380 ? '320px' : '100%',
                         }}
                     />
                     <GenericBox

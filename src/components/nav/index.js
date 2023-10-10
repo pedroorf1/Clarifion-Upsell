@@ -35,17 +35,17 @@ export const Nav = () => {
                     overflow: 'hidden',
                     border: '0',
                     margin: '0 auto',
-                    '-webkit-overflow-scrolling': 'touch',
-                    '-ms-overflow-style': '-ms-autohiding-scrollbar',
+                    WebkitOverflowScrollin: 'touch',
+                    msOverflowStyle: '-ms-autohiding-scrollbar',
                     transform: 'translateX(-5px)',
                     transition: 'transform 0.5s',
                 }}
             >
-                {nave_list.map((item) => (
+                {nave_list.map((item, index) => (
                     <Card
                         text={item.text}
                         iconName={item.iconName}
-                        key={item.text}
+                        key={index + 'text'}
                         style={{
                             flex: '0 0 auto',
                         }}

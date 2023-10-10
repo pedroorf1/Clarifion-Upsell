@@ -25,30 +25,75 @@ export const Comments = ({
                 display: 'flex',
                 flexDirection: 'column',
                 width: '100%',
+                minWidth: '300px',
             }}
             key={comment?.text}
         >
-            <Badge>
+            <Badge
+                style={{
+                    minWidth: '237px',
+                    minHeight: '48px',
+                    flexDirection: 'row',
+                }}
+            >
                 <GenericImg
                     imgSrc={comment.img}
                     style={{ marginRight: '13px' }}
                 />
-                <Score
-                    score={comment.userScore}
+                <GenericBox
                     style={{
                         display: 'flex',
-                        flexDirection: 'row',
-                        position: 'relative',
-                        margin: '0px',
-                        top: '-15px',
+                        flexDirection: 'column',
+                        justifyContent: 'space-around',
+                        alignItems: 'flex-start',
+                        height: '100%',
                     }}
-                />
+                >
+                    <Score
+                        score={comment.userScore}
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            position: 'relative',
+                            margin: '0px',
+                        }}
+                    />
+                    <GenericBox
+                        style={{
+                            flexDirection: 'row',
+                            lineHeight: '1rem',
+                            gap: '0.5rem',
+                        }}
+                    >
+                        <GenericText
+                            style={{
+                                fontSize: '14px',
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            Ken T.
+                        </GenericText>
+                        <GenericImg imgSrc={verified} />
+                        <GenericText
+                            style={{
+                                fontSize: '12px',
+                                color: '#5BB59A',
+                            }}
+                        >
+                            Verified Customer
+                        </GenericText>
+                    </GenericBox>
+                </GenericBox>
             </Badge>
             <GenericText
                 style={{
+                    position: 'relative',
+                    minWidth: '300px',
+                    marginLeft: '-0.5rem',
                     textAlign: 'justify',
                     fontSize: theme.baseFonts.fontSize.medio,
                     padding: '24px',
+                    marginTop: '-1.5rem',
                 }}
             >
                 {comment?.text}

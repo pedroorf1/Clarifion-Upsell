@@ -92,7 +92,7 @@ export const GenericText = ({ style, children }) => {
             ...style,
         }
     }
-    return <text style={style}>{children}</text>
+    return <span style={style}>{children}</span>
 }
 
 export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {

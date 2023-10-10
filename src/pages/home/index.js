@@ -40,13 +40,6 @@ const Initial = () => {
 
     return (
         <Container>
-            <p>
-                {console.log('\n\n\n: screenConstext: ', screenContext._screen)}
-                {console.log(
-                    '\n\n\n: document.body.clientWidth: ',
-                    screenContext._screenSizes
-                )}
-            </p>
             <Nav />
             <TitleBar />
             <WaitOrder />

@@ -22,9 +22,17 @@ export const Score = ({ score = 0, style }) => {
         <GenericBox style={style}>
             {Value.map((item, index) =>
                 index == 2 ? (
-                    <GenericImg imgSrc={starYellow} style={imgStyle} />
+                    <GenericImg
+                        imgSrc={starYellow}
+                        style={imgStyle}
+                        key={index + 'score'}
+                    />
                 ) : (
-                    <GenericImg imgSrc={starBordered} style={imgStyle} />
+                    <GenericImg
+                        imgSrc={starBordered}
+                        style={imgStyle}
+                        key={index + 'score'}
+                    />
                 )
             )}
         </GenericBox>
