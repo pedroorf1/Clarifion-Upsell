@@ -19,7 +19,8 @@ export const BodyProduct = () => {
         position: 'relative',
         flexDirection: 'column',
         margin: _screenSizes.largura < 400 ? '0' : '0 auto',
-        maxWidth: 'calc(575px - 40px)',
+        maxWidth: 'calc(575px - 80px)',
+        minWidth: 'calc(360px - 40px)',
     }
 
     return (
@@ -32,6 +33,7 @@ export const BodyProduct = () => {
                 wordSpacing: 'nowrap',
                 margin:
                     _screenSizes.largura < 800 ? '3rem auto' : '2.5rem auto',
+                border: _screenSizes.largura < 800 ? '0' : null,
                 justifyContent: 'center',
                 alignItems: 'center',
                 color: theme.baseCollors.preto,
@@ -42,7 +44,7 @@ export const BodyProduct = () => {
                     display: 'flex',
                     flexDirection: 'row',
                     position: 'relative',
-                    gap: _screenSizes.largura < 400 ? '20px' : '40px',
+                    gap: _screenSizes.largura < 400 ? '10px' : '20px',
                     backgroundColor: '#FAFAFA',
                     padding: _screenSizes.largura < 400 ? '20px' : '40px',
                 }}
@@ -54,6 +56,8 @@ export const BodyProduct = () => {
                             width: '100%',
                             maxWidth:
                                 _screenSizes.largura < 380 ? '320px' : '100%',
+                            marginLeft:
+                                _screenSizes.largura < 400 ? '-1rem' : '0',
                         }}
                     />
                     <GenericBox
@@ -71,6 +75,7 @@ export const BodyProduct = () => {
                 <GenericBox
                     style={{
                         ...contentStyle,
+                        padding: _screenSizes.largura < 400 ? '10px' : '20px',
                     }}
                 >
                     lorem ipsum dolor sit amet, consectetur adip lorem ipsum

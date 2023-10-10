@@ -20,9 +20,11 @@ export const TitleBar = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                margin: '0 auto',
+                wordWrap: 'nowrap',
+                border: '0',
+                margin: '0',
                 // marginTop: _screenSizes.largura < 600 ? '0px' : '0px',
-                width: '100%',
+                width: '100% - 1rem',
                 backgroundColor: theme.baseCollors.white,
                 color: theme.baseCollors.preto,
             }}
