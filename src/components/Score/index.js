@@ -21,7 +21,7 @@ export const Score = ({ score = 0, style }) => {
     return (
         <GenericBox style={style}>
             {Value.map((item, index) =>
-                index == 2 ? (
+                index != 2 ? (
                     <GenericImg
                         imgSrc={starYellow}
                         style={imgStyle}
