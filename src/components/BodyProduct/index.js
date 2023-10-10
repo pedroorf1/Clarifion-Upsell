@@ -9,10 +9,12 @@ import {
 } from '@/components/generics/Generics.js'
 
 import { BodyLeft } from '@/components/BodyProduct/BodyLeft'
+import { BodyRight } from '@/components/BodyProduct/BodyRight'
 
 //import imgs
 import productLargeImg from '@/components/BodyProduct/imgs/productLargeImg.png'
 import { Comments } from '../Comments'
+import { Footer } from '@/components/footer'
 
 export const BodyProduct = () => {
     const { _screen, _screenSizes } = useContext(SContexto)
@@ -20,10 +22,11 @@ export const BodyProduct = () => {
     return (
         <GenericContainer
             style={{
-                flexDirection: 'column',
+                flexDirection: 'row',
                 position: 'relative',
                 maxWidth: '1245px',
                 minWidth: '360px',
+                rowGap: '1rem',
                 wordSpacing: 'nowrap',
                 margin: _screenSizes.largura < 800 ? '4rem auto' : '4rem auto',
                 backgroundColor: theme.baseCollors.cinza,
@@ -35,6 +38,9 @@ export const BodyProduct = () => {
             }}
         >
             <BodyLeft />
+            <BodyRight />
+
+            <Footer />
         </GenericContainer>
     )
 }
