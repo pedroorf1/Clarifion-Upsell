@@ -15,8 +15,10 @@ const Initial = () => {
 
     const sm = 360
     const lg = 1245
-
-    const mediaMatch = window.matchMedia('(max-width: 1244px)')
+    let mediaMatch = null
+    if (window?.matchMedia) {
+        mediaMatch = window.matchMedia('(max-width: 1244px)')
+    }
     const [matches, setMatches] = React.useState(mediaMatch.matches)
 
     React.useEffect(() => {
@@ -34,7 +36,7 @@ const Initial = () => {
             mediaMatch.removeListener(handler)
             window.removeEventListener('resize', listener)
         }
-    })
+    }, [matches])
 
     return (
         <Container>
