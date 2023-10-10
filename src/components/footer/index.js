@@ -46,9 +46,7 @@ export const Footer = () => {
     return (
         <GenericContainer style={stylesContainer}>
             <GenericBox style={bagStyle}>
-                Copyright
-                <Icon icon="prime:lock" style={iconStyle} />
-                2023 | clarifionsupport@clarifion.com
+                Copyright (C) 2023 | clarifionsupport@clarifion.com
             </GenericBox>
             <GenericBox style={bagStyle}>
                 <Icon icon="prime:lock" style={iconStyle} />
