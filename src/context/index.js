@@ -1,13 +1,16 @@
 'use client'
 import React, { createContext } from 'react'
 
-const sm = 360
+const sm = null
 export const SContexto = createContext(null)
 const ScreenProvider = ({ children }) => {
-    const [_screen, setScreen] = React.useState(sm)
+    const [_screen, setScreen] = React.useState({
+        largura: parseInt(document.body.clientWidth),
+        altura: parseInt(document.body.clientHeight),
+    })
     const [_screenSizes, setScreenSizes] = React.useState({
-        largura: 360,
-        altura: 600,
+        largura: parseInt(document.body.clientWidth),
+        altura: parseInt(document.body.clientHeight),
     })
 
     return (

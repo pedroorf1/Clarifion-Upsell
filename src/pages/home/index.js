@@ -9,22 +9,37 @@ import { TitleBar } from '@/components/TitleBar'
 import { WaitOrder } from '@/components/WaitOrder'
 import { Steps } from '@/components/Steps'
 import { BodyProduct } from '@/components/BodyProduct'
+import { Footer } from '@/components/footer'
 
 const Initial = () => {
     const screenContext = useContext(SContexto)
 
-    const sm = 360
-    const lg = 1245
+    let displaySize = null
+
     let mediaMatch = null
+    const [matches, setMatches] = React.useState(null)
     if (window?.matchMedia) {
-        mediaMatch = window.matchMedia('(max-width: 1244px)')
+        mediaMatch = window.matchMedia('(max-width: 1245px)')
+        if (mediaMatch.matches) displaySize = 1245
+        mediaMatch = window.matchMedia('(max-width: 900px)')
+        if (mediaMatch.matches) displaySize = 900
+        mediaMatch = window.matchMedia('(max-width: 800px)')
+        if (mediaMatch.matches) displaySize = 800
+        mediaMatch = window.matchMedia('(max-width: 720px)')
+        if (mediaMatch.matches) displaySize = 720
+        mediaMatch = window.matchMedia('(max-width: 480px)')
+        if (mediaMatch.matches) displaySize = 480
+        mediaMatch = window.matchMedia('(max-width: 360px)')
+        if (mediaMatch.matches) displaySize = 360
     }
-    const [matches, setMatches] = React.useState(mediaMatch.matches)
 
     React.useEffect(() => {
         const handler = (e) => setMatches(e.matches)
         mediaMatch.addListener(handler)
-        screenContext.setScreen(matches ? sm : lg)
+        screenContext.setScreen({
+            largura: displaySize,
+            altura: parseInt(document.body.clientHeight),
+        })
         const listener = () =>
             screenContext.setScreenSizes({
                 largura: parseInt(document.body.clientWidth),
@@ -36,17 +51,22 @@ const Initial = () => {
             mediaMatch.removeListener(handler)
             window.removeEventListener('resize', listener)
         }
-    }, [matches])
+    }, [])
 
-    return (
-        <Container>
-            <Nav />
-            <TitleBar />
-            <WaitOrder />
-            <Steps />
-            <BodyProduct />
-        </Container>
-    )
+    return mediaMatch ? (
+        <>
+            <Container
+                style={{ width: '100%', minWidth: '360px', maxWidth: '1445px' }}
+            >
+                <Nav />
+                <TitleBar />
+                <WaitOrder />
+                <Steps />
+                <BodyProduct />
+            </Container>
+            <Footer />
+        </>
+    ) : null
 }
 
 export default Initial

@@ -17,6 +17,8 @@ export const TitleBar = () => {
         <GenericContainer
             style={{
                 display: 'flex',
+                width: '100%',
+                minWidth: '100%',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -24,7 +26,7 @@ export const TitleBar = () => {
                 border: '0',
                 margin: '0',
                 // marginTop: _screenSizes.largura < 600 ? '0px' : '0px',
-                width: '100% - 1rem',
+                width: _screenSizes,
                 backgroundColor: theme.baseCollors.white,
                 color: theme.baseCollors.preto,
             }}
@@ -33,7 +35,9 @@ export const TitleBar = () => {
                 style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    width: _screen != 360 ? '1245px' : '100%',
+                    width: '100%',
+                    maxWidth: '1445px',
+                    minWidth: '320px',
                     height: _screenSizes.largura < 600 ? '60px' : '96px',
                     justifyContent: 'space-around',
                     alignItems: 'center',

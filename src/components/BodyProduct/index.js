@@ -2,22 +2,12 @@ import React, { useContext } from 'react'
 import { SContexto } from '@/context'
 
 import theme from '@/theme/global/style'
-import {
-    GenericContainer,
-    GenericBox,
-    GenericImg,
-} from '@/components/generics/Generics.js'
-
+import { GenericContainer } from '@/components/generics/Generics.js'
 import { BodyLeft } from '@/components/BodyProduct/BodyLeft'
 import { BodyRight } from '@/components/BodyProduct/BodyRight'
 
-//import imgs
-import productLargeImg from '@/components/BodyProduct/imgs/productLargeImg.png'
-import { Comments } from '../Comments'
-import { Footer } from '@/components/footer'
-
 export const BodyProduct = () => {
-    const { _screen, _screenSizes } = useContext(SContexto)
+    const { _screenSizes } = useContext(SContexto)
 
     return (
         <GenericContainer
@@ -30,7 +20,7 @@ export const BodyProduct = () => {
                 wordSpacing: 'nowrap',
                 margin: _screenSizes.largura < 800 ? '4rem auto' : '4rem auto',
                 backgroundColor: theme.baseCollors.cinza,
-                padding: _screenSizes.largura < 720 ? '0' : '2rem',
+                padding: _screenSizes.largura < 720 ? '0' : '2rem 0',
                 borderRadius: '20px',
                 justifyContent: 'center',
                 alignItems: 'top',
@@ -39,8 +29,6 @@ export const BodyProduct = () => {
         >
             <BodyLeft />
             <BodyRight />
-
-            <Footer />
         </GenericContainer>
     )
 }

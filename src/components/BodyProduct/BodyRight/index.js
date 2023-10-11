@@ -9,7 +9,6 @@ import {
 } from '@/components/generics/Generics.js'
 
 //import imgs
-import productLargeImg from '@/components/BodyProduct/imgs/productLargeImg.png'
 import { Comments } from '../../Comments'
 
 export const BodyRight = () => {
@@ -28,14 +27,6 @@ export const BodyRight = () => {
 
     return (
         <GenericBox style={{ ...contentStyle }}>
-            <GenericImg
-                imgSrc={productLargeImg}
-                style={{
-                    width: '100%',
-                    maxWidth: _screenSizes.largura < 380 ? '320px' : '100%',
-                    marginLeft: '0',
-                }}
-            />
             <GenericBox
                 style={{
                     width: '100%',

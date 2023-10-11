@@ -5,8 +5,8 @@ import { GenericBox, GenericContainer } from '../generics/Generics'
 
 export const Footer = () => {
     const stylesContainer = {
-        position: 'absolute',
-        bottom: '-2rem',
+        position: 'relative',
+        bottom: '0',
         width: '100%',
         minHeight: '80px',
         height: 'auto',
@@ -16,7 +16,6 @@ export const Footer = () => {
         margin: '0',
         padding: '1rem 0',
         border: '0',
-        top: '100%',
         justifyContent: 'space-around',
         alignItems: 'center',
     }
