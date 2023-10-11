@@ -13,6 +13,7 @@ export const Card = ({ text, iconName = 'mdi-light:home', style }) => {
         textTransform: 'uppercase',
         justifyContent: 'space-around',
         alignItems: 'center',
+        backgroundColor: 'transparent',
     }
     const iconStyle = {
         display: 'flex',
@@ -22,12 +23,19 @@ export const Card = ({ text, iconName = 'mdi-light:home', style }) => {
         margin: '10px',
         width: '22px',
         height: '22px',
+        backgroundColor: 'transparent',
     }
 
     return (
         <GenericBox style={{ ...boxStyle, style }}>
             <Icon icon={iconName} style={iconStyle} />
-            <GenericText>{text}</GenericText>
+            <GenericText
+                style={{
+                    backgroundColor: 'transparent',
+                }}
+            >
+                {text}
+            </GenericText>
         </GenericBox>
     )
 }

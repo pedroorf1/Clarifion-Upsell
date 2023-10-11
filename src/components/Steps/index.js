@@ -19,6 +19,7 @@ export const Steps = () => {
         maxHeight: _screenSizes.largura > 960 ? '40px' : '20px',
         fontSize: _screenSizes.largura > 960 ? '12px' : '8px',
         padding: _screenSizes.largura > 960 ? null : '10px',
+        backgroundColor: 'transparent',
     }
     const styleToStepsCard = {
         display: 'flex',
@@ -29,6 +30,7 @@ export const Steps = () => {
         fontSize: _screenSizes.largura > 960 ? '20px' : '12px',
         fontStyle: 'regular',
         maxWidth: _screenSizes.largura > 960 ? '100%' : '22%',
+        backgroundColor: 'transparent',
     }
 
     return (
@@ -68,6 +70,7 @@ export const Steps = () => {
                     position: 'absolute',
                     wordWrap: 'nowrap',
                     rowGap: '24px',
+                    backgroundColor: 'transparent',
                 }}
             >
                 <GenericBox style={styleToStepsCard}>
@@ -81,7 +84,13 @@ export const Steps = () => {
                 <GenericBox style={styleToStepsCard}>
                     <GenericImg imgSrc={done} style={iconsStyle} />
                     {_screenSizes.largura > 600 ? (
-                        <GenericText>Step2: Checkout</GenericText>
+                        <GenericText
+                            style={{
+                                backgroundColor: 'transparent',
+                            }}
+                        >
+                            Step2: Checkout
+                        </GenericText>
                     ) : (
                         <GenericText>Checkout</GenericText>
                     )}
@@ -93,7 +102,13 @@ export const Steps = () => {
                         style={iconsStyle}
                     />
                     {_screenSizes.largura > 600 ? (
-                        <GenericText>Step3: Special Offer</GenericText>
+                        <GenericText
+                            style={{
+                                backgroundColor: 'transparent',
+                            }}
+                        >
+                            Step3: Special Offer
+                        </GenericText>
                     ) : (
                         <GenericText>Special Offer</GenericText>
                     )}

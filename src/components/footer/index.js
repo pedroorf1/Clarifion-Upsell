@@ -28,6 +28,7 @@ export const Footer = () => {
         margin: '1px !important',
         width: '16px',
         height: '16px',
+        backgroundColor: 'transparent',
     }
 
     const bagStyle = {
@@ -40,6 +41,7 @@ export const Footer = () => {
         justifyContent: 'flex-start',
         alignItems: 'center',
         maxWidth: '400px',
+        backgroundColor: 'transparent',
     }
 
     return (

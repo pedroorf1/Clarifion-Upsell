@@ -25,6 +25,7 @@ export const Comments = ({
     return comments?.map((comment) => (
         <GenericBox
             style={{
+                borderRadius: '10px',
                 display: 'flex',
                 flexDirection: 'column',
                 width: '100%',
@@ -38,6 +39,7 @@ export const Comments = ({
                     minWidth: '237px',
                     minHeight: '48px',
                     flexDirection: 'row',
+                    borderRadius: '10px',
                 }}
             >
                 <GenericImg

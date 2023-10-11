@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
 
+import theme from '@/theme/global/style'
+
 export const GenericContainer = ({ style, children }) => {
     if (style === undefined) {
         style = {
@@ -8,6 +10,7 @@ export const GenericContainer = ({ style, children }) => {
             flexWrap: 'wrap',
             width: '100%',
             height: '100%',
+            backgroundColor: theme.baseCollors.branco,
         }
     } else {
         style = {
@@ -15,6 +18,7 @@ export const GenericContainer = ({ style, children }) => {
             flexWrap: 'wrap',
             width: '100%',
             height: '100%',
+            backgroundColor: theme.baseCollors.branco,
             ...style,
         }
     }
@@ -24,7 +28,7 @@ export const GenericContainer = ({ style, children }) => {
 export const Badge = ({ style, children }) => {
     if (style === undefined) {
         style = {
-            backgroundColor: 'transparent',
+            backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             flexWrap: 'wrap',
             flexDirection: 'row',
@@ -33,7 +37,7 @@ export const Badge = ({ style, children }) => {
         }
     } else {
         style = {
-            backgroundColor: 'transparent',
+            backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             flexWrap: 'wrap',
             flexDirection: 'row',
@@ -48,10 +52,12 @@ export const Badge = ({ style, children }) => {
 export const GenericButton = ({ style, text, props }) => {
     if (style === undefined) {
         style = {
+            backgroundColor: theme.baseCollors.branco,
             display: 'flex',
         }
     } else {
         style = {
+            backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             ...style,
         }
@@ -66,11 +72,13 @@ export const GenericButton = ({ style, text, props }) => {
 export const GenericBox = ({ style, children }) => {
     if (style === undefined) {
         style = {
+            backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             flexWrap: 'wrap',
         }
     } else {
         style = {
+            backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             flexWrap: 'wrap',
             ...style,
@@ -84,11 +92,15 @@ export const GenericText = ({ style, children }) => {
         style = {
             display: 'flex',
             flexWrap: 'wrap',
+            margin: '0 0.1rem',
+            backgroundColor: 'transparent',
         }
     } else {
         style = {
             display: 'flex',
             flexWrap: 'wrap',
+            margin: '0 0.1rem',
+            backgroundColor: 'transparent',
             ...style,
         }
     }
@@ -101,10 +113,12 @@ export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
 
     if (style === undefined) {
         style = {
+            backgroundColor: 'transparent',
             display: 'flex',
         }
     } else {
         style = {
+            backgroundColor: 'transparent',
             display: 'flex',
             ...style,
         }
@@ -112,6 +126,7 @@ export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
     const midText = (
         <span
             style={{
+                backgroundColor: 'transparent',
                 display: 'flex',
                 position: 'absolute',
                 color: 'white',

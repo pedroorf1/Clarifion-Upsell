@@ -13,7 +13,7 @@ import productLargeImg from '@/components/BodyProduct/imgs/productLargeImg.png'
 import { Comments } from '../../Comments/'
 
 export const BodyLeft = () => {
-    const { _screen, _screenSizes } = useContext(SContexto)
+    const { _screenSizes } = useContext(SContexto)
 
     const contentStyle = {
         position: 'relative',
@@ -24,6 +24,7 @@ export const BodyLeft = () => {
                 : '0 auto',
         maxWidth: 'calc(575px - 80px)',
         minWidth: 'calc(360px - 40px)',
+        backgroundColor: 'transparent',
     }
 
     return (
@@ -34,6 +35,7 @@ export const BodyLeft = () => {
                     width: '100%',
                     maxWidth: _screenSizes.largura < 380 ? '320px' : '100%',
                     marginLeft: '0',
+                    borderRadius: '10px',
                 }}
             />
             <GenericBox
@@ -42,7 +44,6 @@ export const BodyLeft = () => {
                     height: '188px',
                     marginTop: '24px',
                     borderRadius: '20px',
-                    backgroundColor: theme.baseCollors.branco,
                 }}
             >
                 <Comments />

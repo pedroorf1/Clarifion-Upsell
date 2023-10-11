@@ -39,6 +39,7 @@ export const Nav = () => {
                     msOverflowStyle: '-ms-autohiding-scrollbar',
                     transform: 'translateX(-5px)',
                     transition: 'transform 0.5s',
+                    backgroundColor: 'transparent',
                 }}
             >
                 {nave_list.map((item, index) => (
@@ -48,6 +49,7 @@ export const Nav = () => {
                         key={index + 'text'}
                         style={{
                             flex: '0 0 auto',
+                            backgroundColor: 'transparent',
                         }}
                     />
                 ))}
