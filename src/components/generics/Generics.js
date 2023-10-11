@@ -4,8 +4,9 @@ import React from 'react'
 import theme from '@/theme/global/style'
 
 export const GenericContainer = ({ style, children }) => {
+    let styleLocal = {}
     if (style === undefined) {
-        style = {
+        styleLocal = {
             display: 'flex',
             flexWrap: 'wrap',
             width: '100%',
@@ -13,7 +14,7 @@ export const GenericContainer = ({ style, children }) => {
             backgroundColor: theme.baseCollors.branco,
         }
     } else {
-        style = {
+        styleLocal = {
             display: 'flex',
             flexWrap: 'wrap',
             width: '100%',
@@ -22,12 +23,13 @@ export const GenericContainer = ({ style, children }) => {
             ...style,
         }
     }
-    return <div style={style}>{children}</div>
+    return <div style={styleLocal}>{children}</div>
 }
 
 export const Badge = ({ style, children }) => {
+    let styleLocal = {}
     if (style === undefined) {
-        style = {
+        styleLocal = {
             backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             flexWrap: 'wrap',
@@ -36,7 +38,7 @@ export const Badge = ({ style, children }) => {
             padding: '20px',
         }
     } else {
-        style = {
+        styleLocal = {
             backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             flexWrap: 'wrap',
@@ -46,57 +48,60 @@ export const Badge = ({ style, children }) => {
             ...style,
         }
     }
-    return <div style={style}>{children}</div>
+    return <div style={styleLocal}>{children}</div>
 }
 
 export const GenericButton = ({ style, text, props }) => {
+    let styleLocal = {}
     if (style === undefined) {
-        style = {
+        styleLocal = {
             backgroundColor: theme.baseCollors.branco,
             display: 'flex',
         }
     } else {
-        style = {
+        styleLocal = {
             backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             ...style,
         }
     }
     return (
-        <button style={style} props={props}>
+        <button style={styleLocal} props={props}>
             {text}
         </button>
     )
 }
 
 export const GenericBox = ({ style, children }) => {
+    let styleLocal = {}
     if (style === undefined) {
-        style = {
+        styleLocal = {
             backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             flexWrap: 'wrap',
         }
     } else {
-        style = {
+        styleLocal = {
             backgroundColor: theme.baseCollors.branco,
             display: 'flex',
             flexWrap: 'wrap',
             ...style,
         }
     }
-    return <section style={style}>{children}</section>
+    return <section style={styleLocal}>{children}</section>
 }
 
 export const GenericText = ({ style, children }) => {
+    let styleLocal = {}
     if (style === undefined) {
-        style = {
+        styleLocal = {
             display: 'flex',
             flexWrap: 'wrap',
             margin: '0 0.1rem',
             backgroundColor: 'transparent',
         }
     } else {
-        style = {
+        styleLocal = {
             display: 'flex',
             flexWrap: 'wrap',
             margin: '0 0.1rem',
@@ -104,20 +109,21 @@ export const GenericText = ({ style, children }) => {
             ...style,
         }
     }
-    return <span style={style}>{children}</span>
+    return <span style={styleLocal}>{children}</span>
 }
 
 export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
+    let styleLocal = {}
     const mathSvg = /.svg/g
     const source = !imgSrc?.src ? imgSrc : imgSrc.src
 
     if (style === undefined) {
-        style = {
+        styleLocal = {
             backgroundColor: 'transparent',
             display: 'flex',
         }
     } else {
-        style = {
+        styleLocal = {
             backgroundColor: 'transparent',
             display: 'flex',
             ...style,
@@ -150,7 +156,7 @@ export const GenericImg = ({ style, imgSrc, middleText, textStyle }) => {
                 }}
             >
                 {middleText ? midText : null}
-                <img style={style} src={source} />
+                <img style={styleLocal} src={source} />
             </div>
         )
     } else {

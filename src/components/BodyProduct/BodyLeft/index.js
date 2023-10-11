@@ -18,12 +18,13 @@ export const BodyLeft = () => {
     const contentStyle = {
         position: 'relative',
         flexDirection: 'column',
+        width: '100%',
         margin:
-            _screenSizes.largura > 0 && _screenSizes.largura < 720
+            _screenSizes.largura > 450 && _screenSizes.largura < 720
                 ? '1rem auto'
-                : '0 auto',
-        maxWidth: 'calc(575px - 80px)',
-        minWidth: 'calc(360px - 40px)',
+                : '2rem auto',
+        maxWidth: 'calc(575px - 40px)',
+        minWidth: 'calc(360px - 20px)',
         backgroundColor: 'transparent',
     }
 
@@ -33,8 +34,8 @@ export const BodyLeft = () => {
                 imgSrc={productLargeImg}
                 style={{
                     width: '100%',
-                    maxWidth: _screenSizes.largura < 380 ? '320px' : '100%',
-                    marginLeft: '0',
+                    maxWidth: '100%',
+                    marginLeft: '-5px',
                     borderRadius: '10px',
                 }}
             />

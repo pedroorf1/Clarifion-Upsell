@@ -21,9 +21,9 @@ export const BodyRight = () => {
             _screenSizes.largura > 0 && _screenSizes.largura < 720
                 ? '1rem auto'
                 : '0 auto',
-        maxWidth: 'calc(575px - 80px)',
-        minWidth: 'calc(360px - 40px)',
-        minHeight: 'calc(100vh - 80px)',
+        maxWidth: 'calc(575px - 20px)',
+        minWidth: 'calc(360px - 10px)',
+        minHeight: 'calc(100vh - 20px)',
     }
 
     return (
@@ -34,6 +34,7 @@ export const BodyRight = () => {
                     height: '188px',
                     marginTop: '24px',
                     borderRadius: '20px',
+                    backgroundColor: 'transparent',
                 }}
             >
                 <GenericBox
@@ -41,6 +42,7 @@ export const BodyRight = () => {
                         width: '100%',
                         padding: '10px',
                         flexDirection: 'column',
+                        backgroundColor: 'transparent',
                     }}
                 >
                     <Badge>

@@ -23,13 +23,12 @@ export const Steps = () => {
     }
     const styleToStepsCard = {
         display: 'flex',
-        flexDirection: _screenSizes.largura > 960 ? 'row' : 'column',
+        flexDirection: _screenSizes.largura > 600 ? 'row' : 'column',
         justifyContent: 'space-around',
         alignItems: 'center',
         columnGap: '20px',
-        fontSize: _screenSizes.largura > 960 ? '20px' : '12px',
+        fontSize: _screenSizes.largura > 600 ? '20px' : '12px',
         fontStyle: 'regular',
-        maxWidth: _screenSizes.largura > 960 ? '100%' : '22%',
         backgroundColor: 'transparent',
     }
 
@@ -41,7 +40,7 @@ export const Steps = () => {
                     _screenSizes.largura < 600 && _screenSizes.largura > 430
                         ? '60px'
                         : _screenSizes.largura < 430
-                        ? '120px'
+                        ? '150px'
                         : '88px',
                 display: 'flex',
                 flexDirection: 'row',
@@ -63,8 +62,8 @@ export const Steps = () => {
                     flexDirection: 'row',
                     width: '100%',
                     maxWidth: '1445px',
-                    minWidth: '320px',
-                    maxHeight: _screen != 360 ? '40px' : '20px',
+                    minWidth: '340px',
+                    height: '100%',
                     justifyContent: 'space-around',
                     alignItems: 'center',
                     position: 'absolute',
